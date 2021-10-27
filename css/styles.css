@@ -144,11 +144,23 @@ margin-right: 50px;
 
 .header-connect {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
 }
 
+.header-mail, .header-tel {
+  justify-content: center;
+  align-items: center;
+}
+
 .header-mail {
-  margin-right: 50px;
+  margin-right: 30px;
+}
+
+.mail-icon {
+  fill: var(--primary-text-color);
+  margin-right: 10px;
 }
 
 .logo-title-black {
@@ -169,17 +181,24 @@ margin-right: 50px;
     color: var(--accent-color);
 }
 .header-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
   color: var(--primary-text-color);
-  display: block;
 }
 
 .header-contact:hover,
 .header-contact:focus {
   color: var(--accent-color);
+}
+
+.header-contact:hover .mail-icon,
+.header-contact:focus .mail-icon {
+  fill: var(--accent-color);
 }
 
 /* ---------------------------------------hero--------------------------------------------------------- */
@@ -253,17 +272,6 @@ margin-right: var(--card-set-gap);
   margin-bottom: 30px; */
 }
 
-.features-icon {
-  
-  /* align-items: center;
-  display: block; */
-  /* justify-content: center;
-  align-items: center; */
-  background-color: var(--third-background-color);
-  /* margin-bottom: 30px; */
-  
-}
-
 .features-title {
 margin-bottom: 10px;
 font-weight: bold;
@@ -306,6 +314,12 @@ margin-right: var(--card-set-gap);
 
 .team-list-item {
   flex-basis: calc(100% / 4 - var(--card-set-gap));
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color:var(--header-text-color);
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12) ,
+0 1px 1px rgba(0, 0, 0, 0.14),
+0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-list-item:not(:last-child) {
@@ -315,7 +329,6 @@ margin-right: var(--card-set-gap);
 .team-card-text {
   padding-top: 30px;
   padding-bottom: 30px;
-
 }
 
 .team-title {
@@ -356,7 +369,7 @@ justify-content: center;
   margin-right: 10px;
 }
 
-.social-icon {
+.masters-social-icon {
   fill: #AFB1B8;
 }
 
@@ -374,8 +387,8 @@ justify-content: center;
   background-color: var(--accent-color);
 }
 
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
+.social-link:hover .masters-social-icon,
+.social-link:focus .masters-social-icon {
   fill: #ffffff;
 }
 
@@ -439,7 +452,7 @@ margin-bottom: 50px;
   padding-bottom: 60px;
 }
 
-.footer-contacts {
+.footer-list {
   margin-right: 70px;
 }
 
@@ -465,29 +478,50 @@ color: var(--header-text-color);
   color: var(--accent-color);
 }
 
-.footer-list-contact {
-    font-weight: normal;
+.footer-list-contact, .address-contact {
+font-weight: normal;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
+}
+
+.footer-list-contact {
 color: var(--header-text-color);
+}
+
+.address-contact {
+color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-list-contact, .address-contacts {
     font-style: inherit;
 }
 
-.address-contact {
-    font-weight: normal;
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-color: rgba(255, 255, 255, 0.6);
-}
-
 .address-contact:hover, .address-contact:focus {
   color: var(--accent-color);
 }
+
+.footer-list-contact:hover, .footer-list-contact:focus {
+  color: var(--accent-color);
+}
+
+.join-social-link {
+background-color: rgba(255, 255, 255, 0.1);
+}
+
+.join-social-icon {
+  fill: var(--header-text-color);  
+}
+
+.join-title {
+font-weight: bold;
+font-style: 14px;
+line-height: calc(16px / 14px);
+letter-spacing: 3%;
+color: var(--header-text-color);
+margin-bottom: 20px;
+}
+
 /* ---------------------------------------Portfolio--------------------------------------------------------- */
 
 
@@ -520,7 +554,10 @@ background-color: var(--third-background-color);
 
 .portfolio-btn:hover, .portfolio-btn:focus {
     color: var(--header-text-color);
-    background-color: var(--accent-color);
+    background-color: var(--accent-color);    
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+  0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .btn-current {
@@ -537,6 +574,12 @@ background-color: var(--third-background-color);
 
 .project-list-item {
   flex-basis: calc(100% / 3 - var(--card-set-gap));
+}
+
+.project-list-item:hover, .project-list-item:focus {
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+0px 4px 4px rgba(0, 0, 0, 0.06),
+0px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-list-item:not(:last-child) {
